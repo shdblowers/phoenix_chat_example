@@ -1,5 +1,7 @@
 # Simple Chat Example
 
+Following [this guide](https://www.poeticoding.com/connecting-elixir-nodes-with-libcluster-locally-and-on-kubernetes/).
+
 > Built with the [Phoenix Framework](https://github.com/phoenixframework/phoenix)
 
 To start your new Phoenix application you have to:
