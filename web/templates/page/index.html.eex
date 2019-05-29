@@ -1,3 +1,9 @@
+<div>
+  <p>nodes: <%=@nodes%></p>
+  <p>self: <%=@node%></p>
+</div>
+<div id="messages" class="container">
+</div>
 <div id="messages" class="container">
 </div>
 <div id="footer">
