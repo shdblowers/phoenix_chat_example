@@ -4,15 +4,16 @@ defmodule Chat do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
+    # https://hexdocs.pm/libcluster/Cluster.Strategy.Kubernetes.DNS.html#content
     topologies = [
       k8s_chat: [
         strategy: Elixir.Cluster.Strategy.Kubernetes.DNS,
-          config: [
-            service: "chat-nodes",
-            application_name: "chat"
-          ]
+        config: [
+          service: "chat-nodes",
+          application_name: "chat"
         ]
       ]
+    ]
 
     children = [
       {Cluster.Supervisor, [topologies, [name: Chat.ClusterSupervisor]]},
