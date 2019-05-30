@@ -3,8 +3,8 @@ defmodule Chat.UserSocket do
 
   channel "rooms:*", Chat.RoomChannel
 
-  transport :websocket, Phoenix.Transports.WebSocket
-  transport :longpoll, Phoenix.Transports.LongPoll
+  transport :websocket, Phoenix.Transports.WebSocket, check_origin: false
+  transport :longpoll, Phoenix.Transports.LongPoll, check_origin: false
 
   def connect(_params, socket) do
     {:ok, socket}

@@ -4,6 +4,8 @@
     socket: 1,
     socket: 2,
     plug: 1,
-    plug: 2
+    plug: 2,
+    transport: 3,
+    channel: 2
   ]
 ]
